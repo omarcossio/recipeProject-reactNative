@@ -16,7 +16,9 @@ import Recipe from './Recipe';
 const Recipes = () => {
     const [addRecipeModalVisible, setAddRecipeModalVisible] = useState(false);
     const [activeRecipe, setActiveRecipe] = useState(null);
+    const [currentop, setCurrentOp] = useState(null);
 
+    
     const {status, error, data} = useQuery('recipes', api.getRecipes, {
         refetchOnWindowFocus: false,
         staleTime: Infinity,
@@ -33,7 +35,7 @@ const Recipes = () => {
         setCurrentop(operation);
     }
 
-    const openModal = () => {
+    const closeModal = () => {
         setActiveRecipe(null);
         setCurrentop(null);
     }
