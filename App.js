@@ -1,18 +1,18 @@
 import React from 'react';
 import {SafeAreaView, StyleSheet, View} from 'react-native';
-// import {QueryClient, QueryClientProvider} from 'react-query';
+import {QueryClient, QueryClientProvider} from 'react-query';
 import {Banner, Recipes} from './src/components';
 
 
-// const queryClient = new QueryClient();
+const queryClient = new QueryClient();
 
 const App = () => {
 <SafeAreaView style={styles.safeAreaView}>
     <View style={styles.view}>
       <Banner text="🥘 Recipes App" />
-      {/* <QueryClientProvider client={queryClient}>
+      <QueryClientProvider client={queryClient}>
         <Recipes />
-      </QueryClientProvider> */}
+      </QueryClientProvider>
       <Banner text="©️ 2021 - No rights reserved! 😃" />
     </View>
   </SafeAreaView>
