@@ -38,7 +38,7 @@ const calcAvgRating = (ratings) => {
                     <Pressable
                     style={({pressed}) => [
                         {
-                            backfaceVisibility: pressed ?
+                            backgroundColor: pressed ?
                             'rgb(251, 191, 36)' :
                             'rgb(253, 230, 138)'
                         },

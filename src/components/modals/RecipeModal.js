@@ -6,7 +6,7 @@ const RecipeModal = ({handler, recipe}) => {
       return ingredientId;
     }
   
-    const extractPrepStepKe = ({prepStepId}) => {
+    const extractPrepStepKey = ({prepStepId}) => {
       return prepStepId;
     }
   

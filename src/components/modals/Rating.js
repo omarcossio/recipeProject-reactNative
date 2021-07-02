@@ -9,7 +9,7 @@ const Rating = ({rating}) => {
     const [recommended, setRecommended] = useState(rating.recommended);  
 
 
-    const useQueryClient = useQueryClient();
+    const queryClient = useQueryClient();
 
     const deleteMutation = useMutation(api.deleteRating, {
         onSuccess: () => {

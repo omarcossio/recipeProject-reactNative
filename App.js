@@ -6,8 +6,8 @@ import {Banner, Recipes} from './src/components';
 
 const queryClient = new QueryClient();
 
-const App = () => {
-<SafeAreaView style={styles.safeAreaView}>
+const App = () => (
+  <SafeAreaView style={styles.safeAreaView}>
     <View style={styles.view}>
       <Banner text="🥘 Recipes App" />
       <QueryClientProvider client={queryClient}>
@@ -16,8 +16,7 @@ const App = () => {
       <Banner text="©️ 2021 - No rights reserved! 😃" />
     </View>
   </SafeAreaView>
-
-};
+);
 
 const styles = StyleSheet.create({
   safeAreaView: {

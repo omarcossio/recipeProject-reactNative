@@ -16,7 +16,7 @@ import Recipe from './Recipe';
 const Recipes = () => {
     const [addRecipeModalVisible, setAddRecipeModalVisible] = useState(false);
     const [activeRecipe, setActiveRecipe] = useState(null);
-    const [currentop, setCurrentOp] = useState(null);
+    const [currentOp, setCurrentOp] = useState(null);
 
     
     const {status, error, data} = useQuery('recipes', api.getRecipes, {
@@ -32,12 +32,12 @@ const Recipes = () => {
 
     const openModal = (recipe, operation) => {
         setActiveRecipe(recipe);
-        setCurrentop(operation);
+        setCurrentOp(operation);
     }
 
     const closeModal = () => {
         setActiveRecipe(null);
-        setCurrentop(null);
+        setCurrentOp(null);
     }
 
     switch (status) {
@@ -57,20 +57,21 @@ const Recipes = () => {
               }}
             />
             {activeRecipe && currentOp === 'View Recipe' ? (
-              <RecipeModal recipe={activeRecipe} handler={closeModal} />
-            ) : null}
-  
-            {activeRecipe && currentOp === 'View Ratings' ? (
-              <Ratings recipe={activeRecipe} handler={closeModal} />
-            ) : null}
-  
-            {activeRecipe && currentOp === 'Add Rating' ? (
-              <AddRating recipe={activeRecipe} handler={closeModal} />
-            ) : null}
-  
-            {activeRecipe && currentOp === 'Edit Recipe' ? (
-              <EditRecipe recipe={activeRecipe} handler={closeModal} />
-            ) : null}
+            <RecipeModal recipe={activeRecipe} handler={closeModal} />
+          ) : null}
+
+          {activeRecipe && currentOp === 'View Ratings' ? (
+            <Ratings recipe={activeRecipe} handler={closeModal} />
+          ) : null}
+
+          {activeRecipe && currentOp === 'Add Rating' ? (
+            <AddRating recipe={activeRecipe} handler={closeModal} />
+          ) : null}
+
+          {activeRecipe && currentOp === 'Edit Recipe' ? (
+            <EditRecipe recipe={activeRecipe} handler={closeModal} />
+          ) : null}
+
   
             <View style={styles.viewTop}>
               <Text style={styles.text}>{data.length} Recipes</Text>
