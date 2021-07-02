@@ -10,7 +10,7 @@ import {
 } from 'react-native';
 import {useQuery} from 'react-query';
 import api from '../api';
-import {AddRating, AddRecipe, EditRecipe, Ratings, RecipeModal} from './modals';
+import {AddRating, AddRecipe, EditRecipe, Ratings, RecipeModal} from '../components/modals';
 import Recipe from './Recipe';
 
 const Recipes = () => {
