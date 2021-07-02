@@ -10,9 +10,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/slider": "^3.0.3",
     "axios": "^0.21.1",
     "react": "17.0.1",
     "react-native": "0.64.2",
+    "react-native-keyboard-aware-scroll-view": "^0.9.4",
     "react-query": "^3.18.1"
   },
   "devDependencies": {
