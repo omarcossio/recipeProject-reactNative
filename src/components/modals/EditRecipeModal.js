@@ -40,17 +40,17 @@ const EditRecipeModal = ({handler, recipe}) => {
 
     const submitRecipe =  () => {
         mutation.mutate({
-            ecipeId: recipe.recipeId,
-      category: categoryText,
-      title: titleText,
-      description: descText,
-      prepTime: prepTimeText,
-      cookTime: cookTimeText,
-      servings: servingsText,
-      ingredients: ingredients,
-      prepSteps: prepSteps,
-      ratings: recipe.ratings
-        })
+            recipeId: recipe.recipeId,
+            category: categoryText,
+            title: titleText,
+            description: descText,
+            prepTime: prepTimeText,
+            cookTime: cookTimeText,
+            servings: servingsText,
+            ingredients: ingredients,
+            prepSteps: prepSteps,
+            ratings: recipe.ratings
+        });
     }
 
     return (
